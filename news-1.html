@@ -201,284 +201,101 @@
 
     </div>
 
-    <!-- HERO -->
-    <section
-        style="background-image: url('assets/images/amsic_cover.png')"
-        class="relative bg-cover bg-center min-h-screen flex items-center justify-center px-2 md:px-6">
 
-        <!-- overlay -->
-        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
+    <div class="bg-[#8a8d4c] min-h-screen pt-24 md:pt-28 pb-16 md:px-6">
 
-        <div class="relative z-10 max-w-5xl mx-auto text-center text-white mt-12">
-
-            <!-- TITLE -->
-            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl break-words font-extrabold leading-tight text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] animate-fade-up"
-                style="animation-delay: 0.3s;">
-                AMSIC INTEGRATED SCHOOL
-            </h1>
-            
-            <p class="mt-6 text-base md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed animate-fade-up"
-                style="animation-delay: 0.6s;">
-                
-                Empowering students to 
-                <span class="text-amber-300 font-bold">ACHIEVE, INNOVATE, and SERVE</span> 
-                for a brighter future, AMSIC INTEGRATED SCHOOL is dedicated to nurturing capable and value-driven learners through quality education, strong values, and meaningful growth.
-                
-            </p>
-
-            <!-- BUTTON -->
-            <div class="mt-8 animate-fade-up" style="animation-delay: 0.9s;">
-                <a href=""
-                    class="relative inline-flex items-center justify-center px-5 md:px-7 py-2 md:py-3 rounded-full font-semibold text-white 
-                        overflow-hidden group transition-all duration-300">
-
-                    <!-- Rotating Gradient Background -->
-                    <span class="absolute inset-0 bg-[linear-gradient(270deg,#8a8d4c,#b4b76a,#6f723a,#8a8d4c)] 
-                        bg-[length:400%_400%] animate-gradient"></span>
-
-                    <!-- Glow Effect -->
-                    <span class="absolute inset-0 rounded-full blur-md opacity-60 
-                        bg-[linear-gradient(270deg,#8a8d4c,#b4b76a,#6f723a,#8a8d4c)] 
-                        group-hover:opacity-100 transition duration-300"></span>
-
-                    <!-- Shine Sweep -->
-                    <span class="absolute inset-0 overflow-hidden rounded-full">
-                        <span class="absolute top-0 -left-full w-1/2 h-full bg-white/30 skew-x-[-20deg]
-                            group-hover:left-[150%] transition-all duration-700"></span>
-                    </span>
-
-                    <!-- Border Glow -->
-                    <span class="absolute inset-0 rounded-full border border-white/20 group-hover:border-white/50 transition"></span>
-
-                    <!-- Text -->
-                    <span class="relative z-10 flex items-center gap-2 transition-all duration-300 
-                        group-hover:scale-110 group-hover:tracking-wide">
-                        Learn More
-                        <i class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
-                    </span>
-                </a>
-            </div>
+        <!-- breadcrumb navigation -->
+        <div class="max-w-6xl mx-auto mb-6 text-sm text-white/80">
+            <a wire:navigate href="{{ route('Home') }}" class="hover:text-white cursor-pointer">Home</a>
+            <i class="fa-solid fa-angle-right mx-2"></i>
+            <a wire:navigate href="{{ route('ListNews') }}" class="hover:text-white cursor-pointer">News & Documentation</a>
+            <i class="fa-solid fa-angle-right mx-2"></i>
+            <span class="text-white font-semibold">Documentation</span>
         </div>
 
-    </section>
-    
-
-    <!-- continue -->
-    
-
-    <!-- DOCUMENTATION / PROGRAMS -->
-    <section class="bg-[#E6E9C3] py-16 md:px-6">
-
-        <div class="max-w-6xl mx-auto flex flex-col gap-10">
+        <!-- CONTENT -->
+        <div class="max-w-6xl mx-auto bg-[#e7e9cd] p-8 md:p-12 rounded-2xl shadow-xl flex flex-col gap-12">
 
             <!-- Title -->
             <div class="text-center">
-                <h2 class="text-lg sm:text-3xl md:text-4xl font-bold text-[#4c4e04]">
-                    School Programs & Documentation
-                </h2>
-                <p class="text-gray-600 mt-2">
-                    Activities and outreach programs conducted by AMSIC Integrated School
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#4c4e04]">
+                    Basic Computer Literacy Outreach Program
+                </h1>
+                <p class="text-gray-500 mt-2">
+                    Empowering young learners through technology education
                 </p>
             </div>
 
-            <!-- Card -->
-            <div class="grid sm:grid-cols-2 gap-0 md:gap-8 items-center bg-white rounded-2xl shadow-lg overflow-hidden">
+            <!-- Description -->
+            <div class="grid md:grid-cols-2 gap-6 items-start">
+                <p class="text-gray-700 leading-relaxed text-justify text-base md:text-lg">
+                    This outreach program was conducted to introduce Grade 6 students of AMSIC Integrated School to the fundamentals of computer literacy. Through interactive discussions, guided demonstrations, and hands-on activities, the students were given the opportunity to explore and understand how technology plays an important role in their daily lives and education. They learned to identify different parts of a computer, understand how input and output devices work, and perform basic tasks using essential software programs. The program also encouraged curiosity, problem-solving, and confidence in using technology, helping students develop skills that will support their academic growth and prepare them for future learning opportunities.
+                </p>
 
-                <!-- Image -->
-                <div class="p-4 sm:p-0">
-                    <img 
-                        src="assets/images/outreach_1.png" 
-                        class="w-full h-full object-cover"
-                        alt="Outreach Program">
-                </div>
-
-                <!-- Content -->
-                <div class="py-4 md:py-8 px-4 md:px-8 flex flex-col gap-2 md:gap-4">
-
-                    <h3 class="text-lg md:text-2xl font-bold text-[#4c4e04]">
-                        Basic Computer Literacy Outreach
-                    </h3>
-
-                    <p class="text-gray-700 leading-relaxed text-sm md:text-base">
-                        An outreach program designed for grade school students to introduce 
-                        basic computer knowledge including parts of a computer, input and output devices, 
-                        and fundamentals of Microsoft Word, PowerPoint, and Excel.
-                    </p>
-
-                    <a href=""
-                        class="w-fit bg-[#4c4e04] text-white px-3 md:px-6 py-2 md:py-3 rounded-lg 
-                            hover:bg-[#94961f] transition font-semibold shadow-md mt-2 text-sm md:text-base">
-                        View Full Documentation →
-                    </a>
-
-                </div>
-
+                <img src="assets/images/outreach_2.jpg" alt=""
+                    class="rounded-xl shadow-lg w-full h-80 object-cover">
             </div>
 
-        </div>
+            <!-- Topics -->
+            <div class="flex flex-col gap-3">
+                <h2 class="text-xl font-semibold text-[#4c4e04]">Topics Covered:</h2>
 
-    </section>
+                <ul class="list-disc ml-6 text-gray-700 text-base md:text-lg space-y-1">
+                    <li>Basic parts of the Computer (input and output devices)</li>
+                    <li>Introduction to Microsoft Word</li>
+                    <li>Basic PowerPoint Presentation</li>
+                    <li>Introduction to Microsoft Excel</li>
+                </ul>
+            </div>
 
+            <!-- IMAGE STORY SECTION -->
+            <div class="flex flex-col gap-12">
 
-    <!-- AIS -->
-    <section class="bg-gradient-to-br from-[#8a8d4c] to-[#5f6130] py-28 md:px-6 text-white">
+                <!-- Story 1 -->
+                <div class="grid md:grid-cols-2 gap-6 items-center">
+                    <img src="assets/images/outreach_5.jpg" 
+                        class="rounded-xl shadow-lg w-full h-80 object-cover">
 
-        <div class="max-w-6xl mx-auto text-center">
-
-            <h2 class="text-2xl md:text-3xl font-bold mb-12">
-                AIS VALUES
-            </h2>
-
-            <div class="grid md:grid-cols-3 gap-4 lg:gap-8">
-
-                <div class="bg-white/10 backdrop-blur rounded-3xl px-4 lg:px-8 py-7 lg:py-11 hover:bg-white/20 transition">
-                    <i class="fa-solid fa-trophy text-4xl mb-4"></i>
-                    <h3 class="text-xl md:text-2xl font-bold mb-2">Achieve</h3>
-                    <p class="opacity-90">
-                        Striving for academic excellence with everybody; we move as one.
+                    <p class="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+                        The session began with an introduction to the basic parts of a computer. Students listened attentively as facilitators explained each component, allowing them to become familiar with devices they see but may not fully understand. Visual aids and actual equipment were used to make the discussion more engaging and easier to comprehend. Learners were encouraged to ask questions and share their prior knowledge, creating an interactive and participatory environment. This initial activity helped build their confidence and curiosity, setting a strong foundation for the succeeding lessons in the program.
                     </p>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur rounded-3xl px-4 lg:px-8 py-7 lg:py-11 hover:bg-white/20 transition">
-                    <i class="fa-solid fa-lightbulb text-4xl mb-4"></i>
-                    <h3 class="text-xl md:text-2xl font-bold mb-2">Innovate</h3>
-                    <p class="opacity-90">
-                        Turning ideas into action for a brighter school future.
+                <!-- Story 2 -->
+                <div class="grid md:grid-cols-2 gap-6 items-center">
+                    <p class="text-gray-700 text-base md:text-lg leading-relaxed text-justify order-2 md:order-1">
+                        Learners were then introduced to input and output devices through actual demonstrations. They actively participated by identifying devices and understanding how each one helps in operating a computer system. Facilitators provided real-life examples to make the concepts easier to grasp, allowing students to connect the lesson with their everyday experiences. Hands-on interaction with selected devices further enhanced their learning, as they were able to see how inputs are processed and transformed into meaningful outputs. This activity strengthened their understanding of how different components work together to make a computer functional.
+                    </p>
+
+                    <img src="assets/images/outreach_6.jpg" 
+                        class="rounded-xl shadow-lg w-full h-80 object-cover order-1 md:order-2">
+                </div>
+
+                <!-- Story 3 -->
+                <div class="grid md:grid-cols-2 gap-6 items-center">
+                    <img src="assets/images/outreach_7.jpg" 
+                        class="rounded-xl shadow-lg h-96 object-cover ml-0 md:ml-3 lg:ml-24">
+
+                    <p class="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+                        During the hands-on activity, students explored basic computer functions using Microsoft Word. They practiced typing, formatting text, and creating simple documents, building their confidence in using digital tools. Facilitators guided them step-by-step in performing essential tasks such as adjusting font styles, aligning text, and inserting basic elements into their documents. Students were encouraged to experiment and express their creativity, making the activity both educational and enjoyable. This experience helped them develop fundamental skills that are essential for their academic work and future use of technology.
                     </p>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur rounded-3xl px-4 lg:px-8 py-7 lg:py-11 hover:bg-white/20 transition">
-                    <i class="fa-solid fa-hand-holding-heart text-4xl mb-4"></i>
-                    <h3 class="text-xl md:text-2xl font-bold mb-2">Serve</h3>
-                    <p class="opacity-90">
-                        Empowering students and staff to lead through service and responsibility.
+                <!-- Story 4 -->
+                <div class="grid md:grid-cols-2 gap-6 items-center">
+                    <p class="text-gray-700 text-base md:text-lg leading-relaxed text-justify order-2 md:order-1">
+                        The program concluded with activities where students were introduced to PowerPoint and Excel. Through guided exercises, they experienced how technology can be used creatively and effectively in their learning journey. Students learned how to create simple presentations, add text, images, and basic animations in PowerPoint, while in Excel they practiced entering data and using basic formulas. These activities reinforced the skills they had acquired earlier and highlighted the practical applications of technology in their everyday learning and academic tasks.
                     </p>
+
+                    <img src="assets/images/outreach_4.jpg" 
+                        class="rounded-xl shadow-lg w-full h-80 object-cover order-1 md:order-2">
                 </div>
 
             </div>
 
         </div>
 
-    </section>
-
-    <!-- VISION -->
-    <section class="bg-[#E6E9C3] py-32 px-2 md:px-6">
-
-        <div class="max-w-2xl mx-auto text-center">
-
-            <h2 class="text-2xl md:text-4xl font-bold mb-6 text-gray-700">DEPED VISION</h2>
-
-            <div class="flex flex-col gap-4">
-                <p class="text-base md:text-xl text-gray-700 leading-relaxed opacity-90">
-                    We dream of Filipinos who passionately love their country and whose values and competencies
-                    enable them to realize their full potential and contribute meaningfully to building the nation.
-                </p>
-                <p class="text-base md:text-xl text-gray-700 leading-relaxed opacity-90">
-                    As a learner-centered public institution, the Department of Education continuously improves
-                    itself to better serve its stakeholders.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- MISSION -->
-    <section class="relative bg-gradient-to-br from-[#8a8d4c] to-[#6f723a] text-white py-28 px-2 md:px-6">
-
-        <div class="max-w-2xl mx-auto text-center">
-
-            <h2 class="text-2xl md:text-4xl font-bold mb-6">DEPED MISSION</h2>
-
-            <div class="flex flex-col gap-4">
-                <p class="text-center leading-relaxed text-base md:text-xl">
-                    To protect and promote the right of every Filipino to quality, equitable,
-                    culture-based, and complete basic education where:
-                </p>
-
-                <p class="text-center leading-relaxed text-base md:text-xl">
-                    Students learn in a child-friendly, gender-sensitive, safe, and motivating environment
-                </p>
-
-                <p class="text-center leading-relaxed text-base md:text-xl">
-                    Teachers facilitate learning and constantly nurture every learner
-                </p>
-
-                <p class="text-center leading-relaxed text-base md:text-xl">
-                    Administrators and staff, as stewards of the institution, ensure an enabling and supportive environment for effective learning to happen
-                </p>
-
-                <p class="text-center leading-relaxed text-base md:text-xl">
-                    Family, community, and other stakeholders are actively engaged and share responsibility for developing life-long learners
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- CORE VALUES -->
-    <section class="bg-[#cacc92] py-28 px-3 md:px-6">
-
-        <div class="max-w-6xl mx-auto text-center">
-
-            <h2 class="text-2xl md:text-3xl font-bold text-[#4c4e04] mb-8">
-                CORE VALUES
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 xl:gap-10">
-
-                <!-- Maka-Diyos -->
-                <div class="relative flex items-center justify-center bg-[#e3e6c2] rounded-lg px-6 md:px-12 py-12 md:py-16 shadow-xl hover:scale-105 transition overflow-hidden">
-
-                    <!-- centered background icon -->
-                    <i class="fa-solid fa-hands-praying absolute text-[110px] md:text-[160px] text-[#3f4103] opacity-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"></i>
-
-                    <!-- content -->
-                    <p class="z-10 font-semibold text-[#3f4103] text-2xl text-nowrap">
-                        Maka-Diyos
-                    </p>
-
-                </div>
-
-                <!-- Maka-tao -->
-                <div class="relative flex items-center justify-center bg-[#e3e6c2] rounded-lg px-6 md:px-12 py-12 md:py-16 shadow-xl hover:scale-105 transition overflow-hidden">
-
-                    <i class="fa-solid fa-people-group absolute text-[110px] md:text-[160px] text-[#3f4103] opacity-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"></i>
-
-                    <p class="z-10 font-semibold text-[#3f4103] text-2xl text-nowrap">
-                        Maka-tao
-                    </p>
-
-                </div>
-
-                <!-- Makakalikasan -->
-                <div class="relative flex items-center justify-center bg-[#e3e6c2] rounded-lg px-6 md:px-12 py-12 md:py-16 shadow-xl hover:scale-105 transition overflow-hidden">
-
-                    <i class="fa-solid fa-leaf absolute text-[110px] md:text-[160px] text-[#3f4103] opacity-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"></i>
-
-                    <p class="z-10 font-semibold text-[#3f4103] text-2xl text-nowrap">
-                        Makakalikasan
-                    </p>
-
-                </div>
-
-                <!-- Makabansa -->
-                <div class="relative flex items-center justify-center bg-[#e3e6c2] rounded-lg px-6 md:px-12 py-12 md:py-16 shadow-xl hover:scale-105 transition overflow-hidden">
-
-                    <i class="fa-solid fa-flag absolute text-[110px] md:text-[160px] text-[#3f4103] opacity-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"></i>
-
-                    <p class="z-10 font-semibold text-[#3f4103] text-2xl text-nowrap">
-                        Makabansa
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
+    </div>
 
     <!-- FOOTER -->
     <footer class="bg-[#4C4E04] text-white py-10 px-6">
