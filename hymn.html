@@ -39,20 +39,20 @@
                 <!-- Home -->
                 <a href="index.html" 
                     class="relative font-medium tracking-wide transition duration-300
-                    text-[#e6e9c3] font-semibold drop-shadow-[0_0_6px_rgba(230,233,195,0.6)]">
+                        text-white hover:text-[#e6e9c3]">
                     Home
 
-                    <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-full"></span>
+                    <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-0"></span>
                 </a>
 
                 <!-- About Dropdown -->
                 <div class="relative">
                     <button @click="showAbout = !showAbout" 
                         class="relative font-medium tracking-wide transition duration-300
-                        text-white hover:text-[#e6e9c3]">
+                        text-[#e6e9c3] font-semibold drop-shadow-[0_0_6px_rgba(230,233,195,0.6)]">
                         About
-
-                        <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-0"></span>
+                        
+                        <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-full"></span>
                     </button>
 
                     <div x-show="showAbout" x-cloak @click.outside="showAbout = false"

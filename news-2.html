@@ -39,10 +39,10 @@
                 <!-- Home -->
                 <a href="index.html" 
                     class="relative font-medium tracking-wide transition duration-300
-                    text-[#e6e9c3] font-semibold drop-shadow-[0_0_6px_rgba(230,233,195,0.6)]">
+                        text-white hover:text-[#e6e9c3]">
                     Home
 
-                    <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-full"></span>
+                    <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-0"></span>
                 </a>
 
                 <!-- About Dropdown -->
@@ -92,10 +92,11 @@
 
                 <!-- News -->
                 <a href="list-news.html" 
-                    class="relative font-medium tracking-wide transition duration-300 text-white hover:text-[#e6e9c3]">
+                    class="relative font-medium tracking-wide transition duration-300
+                        text-[#e6e9c3] font-semibold drop-shadow-[0_0_6px_rgba(230,233,195,0.6)]">
                     News
 
-                    <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-0"></span>
+                    <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-full"></span>
                 </a>
 
                 <!-- Contact Us -->
@@ -206,9 +207,9 @@
 
         <!-- breadcrumb navigation -->
         <div class="max-w-6xl mx-auto mb-6 text-sm text-white/80">
-            <a wire:navigate href="{{ route('Home') }}" class="hover:text-white cursor-pointer">Home</a>
+            <a wire:navigate href="index.html" class="hover:text-white cursor-pointer">Home</a>
             <i class="fa-solid fa-angle-right mx-2"></i>
-            <a wire:navigate href="{{ route('ListNews') }}" class="hover:text-white cursor-pointer">News & Documentation</a>
+            <a wire:navigate href="list-news.html" class="hover:text-white cursor-pointer">News & Documentation</a>
             <i class="fa-solid fa-angle-right mx-2"></i>
             <span class="text-white font-semibold">Documentation</span>
         </div>

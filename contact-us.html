@@ -39,10 +39,10 @@
                 <!-- Home -->
                 <a href="index.html" 
                     class="relative font-medium tracking-wide transition duration-300
-                    text-[#e6e9c3] font-semibold drop-shadow-[0_0_6px_rgba(230,233,195,0.6)]">
+                        text-white hover:text-[#e6e9c3]">
                     Home
 
-                    <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-full"></span>
+                    <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-0"></span>
                 </a>
 
                 <!-- About Dropdown -->
@@ -100,10 +100,11 @@
 
                 <!-- Contact Us -->
                 <a href="contact-us.html" 
-                    class="relative font-medium tracking-wide transition duration-300 text-white hover:text-[#e6e9c3]">
+                    class="relative font-medium tracking-wide transition duration-300
+                        text-[#e6e9c3] font-semibold drop-shadow-[0_0_6px_rgba(230,233,195,0.6)]">
                     Contact Us
 
-                    <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-0"></span>
+                    <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-full"></span>
                 </a>
 
                 <!-- Login -->
@@ -206,7 +207,7 @@
 
         <!-- breadcrumb navigation -->
         <div class="max-w-6xl mx-auto mb-6 text-sm text-white/80">
-            <a wire:navigate href="{{ route('Home') }}" class="hover:text-white cursor-pointer">Home</a>
+            <a wire:navigate href="index.html" class="hover:text-white cursor-pointer">Home</a>
             <i class="fa-solid fa-angle-right mx-2"></i>
             <span class="text-white font-semibold">Contact Us</span>
         </div>
@@ -258,7 +259,7 @@
                         <div>
                             <p class="font-semibold text-gray-700">Phone</p>
                             <p class="text-sm text-gray-600">
-                                +63 912 345 6789
+                                -
                             </p>
                         </div>
                     </div>
@@ -292,25 +293,25 @@
                     </p>
 
                     <div class="flex flex-col">
-                        <input type="text" placeholder="Your Name" wire:model="name" disabled
+                        <input type="text" placeholder="Your Name" wire:model="name"
                             class="border border-gray-300 p-3 rounded-md outline-none focus:ring-2 focus:ring-[#94961f] bg-white">
 
                     </div>
 
                     <div class="flex flex-col">
-                        <input type="email" placeholder="Your Email" wire:model="email" disabled
+                        <input type="email" placeholder="Your Email" wire:model="email"
                             class="border border-gray-300 p-3 rounded-md outline-none focus:ring-2 focus:ring-[#94961f] bg-white">
 
                     </div>
 
                     <div class="flex flex-col">
-                        <input type="number" placeholder="Your Phone" wire:model="phone" disabled
+                        <input type="number" placeholder="Your Phone" wire:model="phone"
                             class="border border-gray-300 p-3 rounded-md outline-none focus:ring-2 focus:ring-[#94961f] bg-white">
 
                     </div>
 
                     <div class="flex flex-col">
-                        <textarea placeholder="Your Message" wire:model="message" disabled
+                        <textarea placeholder="Your Message" wire:model="message"
                             class="border border-gray-300 p-3 rounded-md outline-none focus:ring-2 focus:ring-[#94961f] bg-white min-h-32 max-h-32"></textarea>
 
                     </div>
