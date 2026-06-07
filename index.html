@@ -7,9 +7,16 @@
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Home</title>
+    <title>Amsic Integrated School</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/amsic_logo.png">
 </head>
-<body class="min-h-screen">
+<body
+    x-data="{ show: false }"
+        x-init="
+            window.addEventListener('scroll', () => {
+                show = window.scrollY > 300
+            })"
+    class="min-h-screen">
 
     <!-- header -->
     <div x-data="{ open: false, showAbout: false }"
@@ -551,6 +558,21 @@
         </div>
 
     </footer>
+
+    <!-- Scroll button -->
+    <button 
+        x-show="show"
+        x-cloak
+        x-transition.scale
+        @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="fixed bottom-6 right-6 z-50 
+                bg-gradient-to-tr from-[#4c4e04] to-[#94961f] 
+                text-white w-12 h-12 rounded-full shadow-2xl 
+                hover:scale-110 hover:shadow-[0_10px_25px_rgba(0,0,0,0.3)] 
+                transition-all duration-300"
+    >
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
 
 </body>
 </html>
