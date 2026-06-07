@@ -1,0 +1,41 @@
+@keyframes logIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-form {
+    animation: logIn 1s ease-in-out;
+}
+
+
+@keyframes fadeUp {
+  0% {
+      opacity: 0;
+      transform: translateY(40px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+    animation: fadeUp 0.9s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+    animation: gradientMove 5s ease infinite;
+}

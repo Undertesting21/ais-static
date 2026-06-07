@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home</title>
+</head>
+<body class="min-h-screen">
+
+    <!-- header -->
+    <div x-data="{ open: false, showAbout: false }"
+        class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-[#a4a726]/90 to-[#111111]/90 backdrop-blur-md">
+
+        <div class="flex items-center justify-between px-6 md:px-16 py-3">
+
+            <!-- LEFT: Logo -->
+            <a class="flex items-center gap-3 cursor-pointer">
+                <img src="assets/images/amsic_logo.png"
+                    class="h-12 md:h-16" alt="">
+
+                <img src="assets/images/achieve_innovate_serve.png"
+                    class="h-10 hidden lg:block" alt="">
+            </a>
+
+            <!-- DESKTOP MENU -->
+            <div class="hidden md:flex items-center gap-8">
+
+                <!-- Home -->
+                <a wire:navigate href="" 
+                    class="relative font-medium tracking-wide transition duration-300
+                    text-[#e6e9c3] font-semibold drop-shadow-[0_0_6px_rgba(230,233,195,0.6)]">
+                    Home
+
+                    <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-full"></span>
+                </a>
+
+                <!-- About Dropdown -->
+                <div class="relative">
+                    <button @click="showAbout = !showAbout" 
+                        class="relative font-medium tracking-wide transition duration-300
+                        text-white hover:text-[#e6e9c3]">
+                        About
+
+                        <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-0"></span>
+                    </button>
+
+                    <div x-show="showAbout" x-cloak @click.outside="showAbout = false"
+                        class="absolute right-0 mt-3 w-60 
+                        bg-[#5f6320] 
+                        backdrop-blur-md rounded-xl shadow-2xl overflow-hidden">
+
+                        <a wire:navigate href="" 
+                            class="px-4 py-3 text-white hover:bg-[#4c4e04] transition flex items-center gap-2">
+                            <i class="fa-solid fa-music text-[#e6e9c3]"></i> Hymn
+                        </a>
+
+                        <a wire:navigate href="" 
+                            class="px-4 py-3 text-white hover:bg-[#4c4e04] transition flex items-center gap-2">
+                            <i class="fa-solid fa-landmark text-[#e6e9c3]"></i> DepEd AC – March
+                        </a>
+
+                        <a wire:navigate href="" 
+                            class="px-4 py-3 text-white hover:bg-[#4c4e04] transition flex items-center gap-2">
+                            <i class="fa-solid fa-sitemap text-[#e6e9c3]"></i> Organizational Structure
+                        </a>
+
+                        <a wire:navigate href="" 
+                            class="px-4 py-3 text-white hover:bg-[#4c4e04] transition flex items-center gap-2">
+                            <i class="fa-solid fa-book text-[#e6e9c3]"></i> Brief History
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Admission -->
+                <a wire:navigate href="" 
+                    class="relative font-medium tracking-wide transition duration-300 text-white hover:text-[#e6e9c3]">
+                    Admission
+
+                    <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-0"></span>
+                </a>
+
+                <!-- News -->
+                <a wire:navigate href="" 
+                    class="relative font-medium tracking-wide transition duration-300 text-white hover:text-[#e6e9c3]">
+                    News
+
+                    <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-0"></span>
+                </a>
+
+                <!-- Contact Us -->
+                <a wire:navigate href="" 
+                    class="relative font-medium tracking-wide transition duration-300 text-white hover:text-[#e6e9c3]">
+                    Contact Us
+
+                    <span class="absolute left-0 -bottom-1 h-[2px] bg-[#e6e9c3] w-0"></span>
+                </a>
+
+                <!-- Login -->
+                <a wire:navigate href=""
+                    class="relative inline-flex items-center justify-center px-5 py-2 rounded-full 
+                        font-semibold text-white overflow-hidden group transition-all duration-300">
+
+                    <!-- animated gradient -->
+                    <span class="absolute inset-0 bg-[linear-gradient(270deg,#8a8d4c,#b4b76a,#6f723a,#8a8d4c)] 
+                        bg-[length:400%_400%] animate-gradient"></span>
+
+                    <!-- glow -->
+                    <span class="absolute inset-0 blur-md opacity-60 
+                        bg-[linear-gradient(270deg,#8a8d4c,#b4b76a,#6f723a,#8a8d4c)]
+                        group-hover:opacity-100 transition"></span>
+
+                    <!-- shine -->
+                    <span class="absolute top-0 -left-full w-1/2 h-full bg-white/30 skew-x-[-20deg]
+                        group-hover:left-[150%] transition-all duration-700"></span>
+
+                    <!-- text -->
+                    <span class="relative z-10
+                        group-hover:scale-110 transition">
+                        Login
+                    </span>
+                </a>
+
+            </div>
+
+            <!-- MOBILE BUTTON -->
+            <button @click="open = !open" class="md:hidden text-white text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+
+        <!-- MOBILE MENU -->
+        <div x-show="open" x-cloak x-transition
+            class="md:hidden 
+                bg-gradient-to-b from-[#6f723a] via-[#4c4e04] to-[#2f310f]
+                text-white px-5 py-6 flex flex-col gap-3 shadow-2xl">
+
+            <!-- Main Links -->
+            <a wire:navigate href=""
+            class="px-4 py-3 rounded-xl hover:bg-white/10 transition font-medium">
+                Home
+            </a>
+
+            <!-- About Section -->
+            <div class="mt-2">
+                <p class="px-4 text-xs uppercase tracking-[0.2em] text-[#dfe3a3] mb-2">
+                    About
+                </p>
+
+                <div class="flex flex-col gap-2">
+                    <a wire:navigate href=""
+                    class="px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 transition">
+                        Hymn
+                    </a>
+
+                    <a wire:navigate href=""
+                    class="px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 transition">
+                        DepEd AC – March
+                    </a>
+
+                    <a wire:navigate href=""
+                    class="px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 transition">
+                        Organizational Structure
+                    </a>
+
+                    <a wire:navigate href=""
+                    class="px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 transition">
+                        Brief History
+                    </a>
+                </div>
+            </div>
+
+            <!-- Other Links -->
+            <a wire:navigate href=""
+            class="px-4 py-3 rounded-xl hover:bg-white/10 transition font-medium mt-2">
+                Admission
+            </a>
+
+            <a wire:navigate href=""
+            class="px-4 py-3 rounded-xl hover:bg-white/10 transition font-medium">
+                Contact Us
+            </a>
+
+            <!-- Login -->
+            <a wire:navigate href=""
+            class="mt-4 bg-[#dfe3a3] text-[#4c4e04] px-4 py-3 rounded-2xl text-center font-bold shadow-lg hover:scale-[1.02] transition">
+                Login
+            </a>
+        </div>
+
+    </div>
+
+    <!-- HERO -->
+    <section
+        style="background-image: url('assets/images/amsic_cover.png')"
+        class="relative bg-cover bg-center min-h-screen flex items-center justify-center px-2 md:px-6">
+
+        <!-- overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto text-center text-white mt-12">
+
+            <!-- TITLE -->
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl break-words font-extrabold leading-tight text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] animate-fade-up"
+                style="animation-delay: 0.3s;">
+                AMSIC INTEGRATED SCHOOL
+            </h1>
+            
+            <p class="mt-6 text-base md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed animate-fade-up"
+                style="animation-delay: 0.6s;">
+                
+                Empowering students to 
+                <span class="text-amber-300 font-bold">ACHIEVE, INNOVATE, and SERVE</span> 
+                for a brighter future, AMSIC INTEGRATED SCHOOL is dedicated to nurturing capable and value-driven learners through quality education, strong values, and meaningful growth.
+                
+            </p>
+
+            <!-- BUTTON -->
+            <div class="mt-8 animate-fade-up" style="animation-delay: 0.9s;">
+                <a wire:navigate href=""
+                    class="relative inline-flex items-center justify-center px-5 md:px-7 py-2 md:py-3 rounded-full font-semibold text-white 
+                        overflow-hidden group transition-all duration-300">
+
+                    <!-- Rotating Gradient Background -->
+                    <span class="absolute inset-0 bg-[linear-gradient(270deg,#8a8d4c,#b4b76a,#6f723a,#8a8d4c)] 
+                        bg-[length:400%_400%] animate-gradient"></span>
+
+                    <!-- Glow Effect -->
+                    <span class="absolute inset-0 rounded-full blur-md opacity-60 
+                        bg-[linear-gradient(270deg,#8a8d4c,#b4b76a,#6f723a,#8a8d4c)] 
+                        group-hover:opacity-100 transition duration-300"></span>
+
+                    <!-- Shine Sweep -->
+                    <span class="absolute inset-0 overflow-hidden rounded-full">
+                        <span class="absolute top-0 -left-full w-1/2 h-full bg-white/30 skew-x-[-20deg]
+                            group-hover:left-[150%] transition-all duration-700"></span>
+                    </span>
+
+                    <!-- Border Glow -->
+                    <span class="absolute inset-0 rounded-full border border-white/20 group-hover:border-white/50 transition"></span>
+
+                    <!-- Text -->
+                    <span class="relative z-10 flex items-center gap-2 transition-all duration-300 
+                        group-hover:scale-110 group-hover:tracking-wide">
+                        Learn More
+                        <i class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+    </section>
+    
+
+    
+
+    <!-- DOCUMENTATION / PROGRAMS -->
+    <section class="bg-[#E6E9C3] py-16 md:px-6">
+
+        <div class="max-w-6xl mx-auto flex flex-col gap-10">
+
+            <!-- Title -->
+            <div class="text-center">
+                <h2 class="text-lg sm:text-3xl md:text-4xl font-bold text-[#4c4e04]">
+                    School Programs & Documentation
+                </h2>
+                <p class="text-gray-600 mt-2">
+                    Activities and outreach programs conducted by AMSIC Integrated School
+                </p>
+            </div>
+
+            <!-- Card -->
+            <div class="grid sm:grid-cols-2 gap-0 md:gap-8 items-center bg-white rounded-2xl shadow-lg overflow-hidden">
+
+                <!-- Image -->
+                <div class="p-4 sm:p-0">
+                    <img 
+                        src="assets/images/outreach_1.png" 
+                        class="w-full h-full object-cover"
+                        alt="Outreach Program">
+                </div>
+
+                <!-- Content -->
+                <div class="py-4 md:py-8 px-4 md:px-8 flex flex-col gap-2 md:gap-4">
+
+                    <h3 class="text-lg md:text-2xl font-bold text-[#4c4e04]">
+                        Basic Computer Literacy Outreach
+                    </h3>
+
+                    <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                        An outreach program designed for grade school students to introduce 
+                        basic computer knowledge including parts of a computer, input and output devices, 
+                        and fundamentals of Microsoft Word, PowerPoint, and Excel.
+                    </p>
+
+                    <a wire:navigate href=""
+                        class="w-fit bg-[#4c4e04] text-white px-3 md:px-6 py-2 md:py-3 rounded-lg 
+                            hover:bg-[#94961f] transition font-semibold shadow-md mt-2 text-sm md:text-base">
+                        View Full Documentation →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- AIS -->
+    <section class="bg-gradient-to-br from-[#8a8d4c] to-[#5f6130] py-28 md:px-6 text-white">
+
+        <div class="max-w-6xl mx-auto text-center">
+
+            <h2 class="text-2xl md:text-3xl font-bold mb-12">
+                AIS VALUES
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-4 lg:gap-8">
+
+                <div class="bg-white/10 backdrop-blur rounded-3xl px-4 lg:px-8 py-7 lg:py-11 hover:bg-white/20 transition">
+                    <i class="fa-solid fa-trophy text-4xl mb-4"></i>
+                    <h3 class="text-xl md:text-2xl font-bold mb-2">Achieve</h3>
+                    <p class="opacity-90">
+                        Striving for academic excellence with everybody; we move as one.
+                    </p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur rounded-3xl px-4 lg:px-8 py-7 lg:py-11 hover:bg-white/20 transition">
+                    <i class="fa-solid fa-lightbulb text-4xl mb-4"></i>
+                    <h3 class="text-xl md:text-2xl font-bold mb-2">Innovate</h3>
+                    <p class="opacity-90">
+                        Turning ideas into action for a brighter school future.
+                    </p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur rounded-3xl px-4 lg:px-8 py-7 lg:py-11 hover:bg-white/20 transition">
+                    <i class="fa-solid fa-hand-holding-heart text-4xl mb-4"></i>
+                    <h3 class="text-xl md:text-2xl font-bold mb-2">Serve</h3>
+                    <p class="opacity-90">
+                        Empowering students and staff to lead through service and responsibility.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- VISION -->
+    <section class="bg-[#E6E9C3] py-32 px-2 md:px-6">
+
+        <div class="max-w-2xl mx-auto text-center">
+
+            <h2 class="text-2xl md:text-4xl font-bold mb-6 text-gray-700">DEPED VISION</h2>
+
+            <div class="flex flex-col gap-4">
+                <p class="text-base md:text-xl text-gray-700 leading-relaxed opacity-90">
+                    We dream of Filipinos who passionately love their country and whose values and competencies
+                    enable them to realize their full potential and contribute meaningfully to building the nation.
+                </p>
+                <p class="text-base md:text-xl text-gray-700 leading-relaxed opacity-90">
+                    As a learner-centered public institution, the Department of Education continuously improves
+                    itself to better serve its stakeholders.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MISSION -->
+    <section class="relative bg-gradient-to-br from-[#8a8d4c] to-[#6f723a] text-white py-28 px-2 md:px-6">
+
+        <div class="max-w-2xl mx-auto text-center">
+
+            <h2 class="text-2xl md:text-4xl font-bold mb-6">DEPED MISSION</h2>
+
+            <div class="flex flex-col gap-4">
+                <p class="text-center leading-relaxed text-base md:text-xl">
+                    To protect and promote the right of every Filipino to quality, equitable,
+                    culture-based, and complete basic education where:
+                </p>
+
+                <p class="text-center leading-relaxed text-base md:text-xl">
+                    Students learn in a child-friendly, gender-sensitive, safe, and motivating environment
+                </p>
+
+                <p class="text-center leading-relaxed text-base md:text-xl">
+                    Teachers facilitate learning and constantly nurture every learner
+                </p>
+
+                <p class="text-center leading-relaxed text-base md:text-xl">
+                    Administrators and staff, as stewards of the institution, ensure an enabling and supportive environment for effective learning to happen
+                </p>
+
+                <p class="text-center leading-relaxed text-base md:text-xl">
+                    Family, community, and other stakeholders are actively engaged and share responsibility for developing life-long learners
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CORE VALUES -->
+    <section class="bg-[#cacc92] py-28 px-3 md:px-6">
+
+        <div class="max-w-6xl mx-auto text-center">
+
+            <h2 class="text-2xl md:text-3xl font-bold text-[#4c4e04] mb-8">
+                CORE VALUES
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 xl:gap-10">
+
+                <!-- Maka-Diyos -->
+                <div class="relative flex items-center justify-center bg-[#e3e6c2] rounded-lg px-6 md:px-12 py-12 md:py-16 shadow-xl hover:scale-105 transition overflow-hidden">
+
+                    <!-- centered background icon -->
+                    <i class="fa-solid fa-hands-praying absolute text-[110px] md:text-[160px] text-[#3f4103] opacity-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"></i>
+
+                    <!-- content -->
+                    <p class="z-10 font-semibold text-[#3f4103] text-2xl text-nowrap">
+                        Maka-Diyos
+                    </p>
+
+                </div>
+
+                <!-- Maka-tao -->
+                <div class="relative flex items-center justify-center bg-[#e3e6c2] rounded-lg px-6 md:px-12 py-12 md:py-16 shadow-xl hover:scale-105 transition overflow-hidden">
+
+                    <i class="fa-solid fa-people-group absolute text-[110px] md:text-[160px] text-[#3f4103] opacity-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"></i>
+
+                    <p class="z-10 font-semibold text-[#3f4103] text-2xl text-nowrap">
+                        Maka-tao
+                    </p>
+
+                </div>
+
+                <!-- Makakalikasan -->
+                <div class="relative flex items-center justify-center bg-[#e3e6c2] rounded-lg px-6 md:px-12 py-12 md:py-16 shadow-xl hover:scale-105 transition overflow-hidden">
+
+                    <i class="fa-solid fa-leaf absolute text-[110px] md:text-[160px] text-[#3f4103] opacity-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"></i>
+
+                    <p class="z-10 font-semibold text-[#3f4103] text-2xl text-nowrap">
+                        Makakalikasan
+                    </p>
+
+                </div>
+
+                <!-- Makabansa -->
+                <div class="relative flex items-center justify-center bg-[#e3e6c2] rounded-lg px-6 md:px-12 py-12 md:py-16 shadow-xl hover:scale-105 transition overflow-hidden">
+
+                    <i class="fa-solid fa-flag absolute text-[110px] md:text-[160px] text-[#3f4103] opacity-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"></i>
+
+                    <p class="z-10 font-semibold text-[#3f4103] text-2xl text-nowrap">
+                        Makabansa
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#4C4E04] text-white py-10 px-6">
+
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10 items-start">
+
+            <!-- School Info -->
+            <div class="flex flex-col items-center md:items-start text-center md:text-left gap-3">
+
+                <img class="h-28" src="assets/images/amsic_logo.png" alt="AMSIC Logo">
+
+                <h2 class="text-xl font-semibold">AMSIC Integrated School</h2>
+                <p class="text-sm text-gray-300">
+                    A public school under the Department of Education committed to quality education.
+                </p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="flex flex-col gap-2 text-center md:text-left">
+                <h3 class="text-lg font-semibold mb-2 border-b border-gray-500 pb-1">
+                    Contact Us
+                </h3>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ais.deped.portal@gmail.com"
+                        target="_blank"
+                        class="hover:text-gray-300 hover:underline">
+                        ais.deped.portal@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:09123456789" class="hover:text-gray-300 hover:underline">
+                        0912-345-6789
+                    </a>
+                </p>
+
+                <p>
+                    <i class="fa-brands fa-facebook"></i>
+                    <a href="https://www.facebook.com/profile.php?id=61578317975035" target="_blank" class="hover:text-gray-300 hover:underline">
+                        Amsic Integrated School - JHS
+                    </a>
+                </p>
+
+                <p>
+                    <i class="fa-brands fa-facebook"></i>
+                    <a href="https://www.facebook.com/profile.php?id=100084966300646" target="_blank" class="hover:text-gray-300 hover:underline">
+                        Amsic Integrated School - SHS
+                    </a>
+                </p>
+
+                <p class="text-sm text-gray-300">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Purok 3, Barangay Amsic, Angeles City
+                </p>
+            </div>
+
+            <!-- DepEd / Government Identity -->
+            <div class="flex flex-col items-center gap-3 text-center">
+                
+                <p class="text-sm text-gray-300">
+                    Department of Education (DepEd) Philippines
+                </p>
+
+                <div class="flex items-center justify-center gap-4 mt-2">
+                    <img class="h-20 md:h-28" src="assets/images/deped-ac.png" alt="DepEd Logo">
+                    <img class="h-20 md:h-28" src="assets/images/kagawaran-ng-eduk.png" alt="Kagawaran ng Edukasyon Logo">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="mt-10 border-t border-gray-600 pt-4 text-center text-sm text-gray-300">
+            © 2026 AMSIC Integrated School. All rights reserved.
+        </div>
+
+    </footer>
+
+</body>
+</html>
