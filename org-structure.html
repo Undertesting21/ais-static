@@ -13,15 +13,12 @@
 <body
     x-data="{ 
         show: false,
-        officialModal: false
         }"
 
     x-init="
         window.addEventListener('scroll', () => {
             show = window.scrollY > 300
         })"
-   
-    x-on:open-official-modal.window="officialModal = true"
 
     class="min-h-screen">
 
@@ -244,10 +241,9 @@
                 <div class="min-w-[600px] flex flex-col items-center p-8 md:p-10">
 
                     <button 
-                        wire:click="showOfficial(
-                                        'Reymille B. Zamora, Ed.D', 
+                        onclick="showOfficial('Reymille B. Zamora, Ed.D', 
                                         'Principal I', 
-                                        'storage/officials/reymille_zamora.png')" 
+                                        'assets/images/ais_cover.png')"                   " 
                         style="animation-delay: 0.6s;" class="animate-fade-up cursor-pointer bg-white border border-[#d4d7a1] rounded-lg px-6 py-3 text-center shadow-md w-[260px]">
                         <p class="font-semibold text-lg">Reymille B. Zamora Ed.D</p>
                         <p class="text-sm text-gray-500">Principal I</p>
@@ -694,21 +690,20 @@
     </div>
 
     <!-- MODAL OVERLAY -->
-    <div x-show="officialModal" x-cloak class="fixed inset-0 bg-black/50 opacity-50 z-40"></div>
+    <div class="modal-overlay hidden fixed inset-0 bg-black/50 opacity-50 z-40"></div>
 
     <!-- MODAL -->
-    <div x-show="officialModal" x-cloak class="fixed inset-0 flex items-center justify-center z-50">
+    <div class="modal hidden fixed inset-0 flex items-center justify-center z-50">
 
         <div 
-            @click.outside="officialModal = false" 
             class="bg-white border border-[#d4d7a1] rounded-2xl shadow-2xl w-72 max-w-xs overflow-hidden relative transition">
 
             <!-- IMAGE -->
             <div class="w-full bg-gradient-to-b from-[#eef2c7] to-white p-4 flex items-center justify-center">
                 <img 
-                    src="{{ $image ? asset($image) : asset('storage/profile_pic/unknown_profile.jpeg') }}" 
+                    src="" 
                     alt="Official"
-                    class="h-[260px] w-full object-contain object-center rounded-lg">
+                    class="image h-[260px] w-full object-contain object-center rounded-lg">
             </div>
             
             <div class="text-center px-6 pb-6">
@@ -822,5 +817,6 @@
         <i class="fa-solid fa-angle-up"></i>
     </button>
 
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
